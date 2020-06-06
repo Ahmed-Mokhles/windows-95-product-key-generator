@@ -2,7 +2,7 @@ import random
 
 print("generating CD key...")
 
-key_CD = random.choice(list(filter(lambda x: x not in [333, 444, 555, 666, 777, 888, 999], [str(i).zfill(3) for i in range(1000)]))) + "-" + random.choice(list(filter(lambda x: (sum([int(i) for i in x]) % 7 == 0) and (x[-1] not in [0, 8, 9]), [str(i).zfill(7) for i in range(10000000)])))
+key_CD = random.choice(list(filter(lambda x: int(x) not in [333, 444, 555, 666, 777, 888, 999], [str(i).zfill(3) for i in range(1000)]))) + "-" + random.choice(list(filter(lambda x: (sum([int(i) for i in x]) % 7 == 0) and (int(x[-1]) not in [0, 8, 9]), [str(i).zfill(7) for i in range(10000000)])))
 
 print("generating OEM key...")
 
